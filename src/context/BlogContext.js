@@ -63,8 +63,10 @@ export const BlogProvider = ({ children }) => {
                 window.location.reload();
             } else {
                 console.log("Ethereum object not found.");
+                setLoading(false);
             }
         } catch(error) {
+            setLoading(false);
             console.log(error);
             alert("No accounts found. Please connect your wallet.");
         }
@@ -82,6 +84,7 @@ export const BlogProvider = ({ children }) => {
                 window.location.reload();
             }
         } catch (error) {
+            setLoading(false);
             console.log(error);
             alert("No accounts found. Please connect your wallet.");
         }
