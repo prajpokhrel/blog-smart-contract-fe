@@ -31,7 +31,7 @@ const Footer = () => {
                                 </a>
                             </li>
                         </ul>
-                        <div className="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                        <div className="small text-center text-muted fst-italic">Copyright &copy; Prajwal Pokhrel. 2022</div>
                     </div>
                 </div>
             </div>
