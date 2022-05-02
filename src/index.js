@@ -3,12 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BlogProvider } from './context/BlogContext';
+import CreateBlog from './CreateBlog';
+import BlogDetails from './BlogDetails';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BlogProvider>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="create-blog" element={<CreateBlog />} />
+          <Route path="/blog-details/:address" element={<BlogDetails />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </BlogProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
